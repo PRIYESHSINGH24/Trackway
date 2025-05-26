@@ -8,17 +8,17 @@ export const LandingPage = () => {
 
   const features = [
     {
-      icon: "./electronics.svg",
+      icon: "./security.svg",
       title: "Enterprise-Grade Security",
       description: "Robust, industry-standard protection with zero training on your data.",
     },
     {
-      icon: "./downloads.svg",
+      icon: "./book.svg",
       title: "Agentic Workflows",
       description: "Produce expert-quality work product for complex workflows, with no prompting required.",
     },
     {
-      icon: "./weight.svg",
+      icon: "./electronics.svg",
       title: "Domain-Specific Models",
       description: "High-performing custom models built for complex professional work.",
     },
