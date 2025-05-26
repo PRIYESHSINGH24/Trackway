@@ -15,7 +15,7 @@ export const VerticalCardScroll = () => {
   }, []);
 
   return (
-    <div className="relative w-full h-full mx-auto overflow-hidden border border-white  flex  items-center justify-center bg-[#ced8d9]">
+    <div className="relative w-full h-full min-h-[400px] mx-auto overflow-hidden border border-white  flex  items-center justify-center bg-[#ced8d9]">
       <AnimatePresence mode="wait">
         <motion.div
           key={currentIndex}

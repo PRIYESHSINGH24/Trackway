@@ -62,7 +62,7 @@ export const Navbar = () => {
     <>
       <MobileNavigation />
       <nav className="bg-[#0f0e0d] z-50 px-4 py-4  hidden fixed top-0  w-full  md:flex justify-between items-center">
-        <h2 className="text-3xl font-serif text-bold  ">Trackway</h2>
+        <h2 className="text-3xl font-serif text-bold  text-neutral-200 ">Trackway</h2>
         <div className="flex justify-between items-center">
           <ul className="flex space-x-4 items-center" >
             <div onMouseEnter={() => setHoveredButton("product")} onMouseLeave={() => setHoveredButton(null)}>

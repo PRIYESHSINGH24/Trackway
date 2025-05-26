@@ -6,7 +6,7 @@ function App() {
 
   return (
     <>
-      <div className=" flex-col w-screen h-full   bg-[#0f0e0d] flex-1 flex ">
+      <div className=" flex-col w-screen h-full overflow-x-hidden   bg-[#0f0e0d] flex-1 flex ">
         <header className="w-full">
           <Navbar />
         </header>

@@ -71,7 +71,7 @@ export function MobileNavigation() {
                     >
                       <a
                         href={item.href || "#"}
-                        className="flex items-center justify-between py-6 text-3xl  text-white font-semibold font-serif transition-colors "
+                        className="flex items-center justify-between py-6 text-2xl  text-white font-semibold font-serif transition-colors "
                         onClick={() => {
                           if (!item.hasSubmenu) {
                             setIsOpen(false)
@@ -93,10 +93,10 @@ export function MobileNavigation() {
                 transition={{ delay: 0.4, duration: 0.3 }}
                 className="pb-8  flex gap-3 "
               >
-                <button className="w-full py-4 bg-white text-black   rounded-md text-lg font-medium  hover:bg-gray-400 transition-colors">
+                <button className="w-full py-2 bg-white text-black   rounded-md text-md font-medium  hover:bg-gray-400 transition-colors">
                   Request a Demo
                 </button>
-                <button className="w-full border border-white hover:border-gray-400 text-white rounded-md text-lg font-medium transition-colors">
+                <button className="w-full border border-white hover:border-gray-400 text-white rounded-md text-md font-medium transition-colors">
                   Login
                 </button>
               </motion.div>
