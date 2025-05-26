@@ -116,7 +116,8 @@ export const LandingPage = () => {
         </div>      </section>
       <section className="min-h-[80vh] w-full flex  flex-col items-center justify-center  gap-6 bg-[#ced8d9] mx-auto ">
         <div className="flex  flex-col md:flex-row gap-10 items-center justify-between w-full max-w-7xl md:px-6 px-2  h-full">
-          <div className={`h-[500px] border-1  bg-black max-w-full bg-[url('./Founder.jpeg')] bg-cover bg-center w-full`} >
+          <div className={`h-[500px] border-1  bg-black max-w-full   w-full`} >
+            <img src="./Founder.jpeg" className="object-cover w-full h-full " />
           </div>
           <div className="w-full md:w-1/2 text-left flex flex-col items-start justify-center gap-4 px-6">
             <h1 className="text-black font-serif text-2xl md:text-4xl  ">"We aim to free engineers from tedious PCB design cycles, so they can focus on what matters innovation, prototyping, and growth. This drives our mission."</h1>
