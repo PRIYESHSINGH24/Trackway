@@ -1,10 +1,19 @@
+import { useState } from 'react';
+import { TryNowForm } from './TryNowForm';
+
 export const Footer = () => {
+  const [isFormOpen, setIsFormOpen] = useState(false);
+
   return (
     <section className="w-full  px-14 py-4 min-h-[70vh] bg-[#1f1d1a]   ">
       <div className="h-40 flex flex-col md:flex-row items-center justify-between  gap-4">
         <h1 className="md:text-4xl text-neutral-200 text-2xl mt-8 font-serif font-medium">Unlock professional class AI for you firm</h1>
-        <button className="bg-white text-black rounded-sm md:px-4 md:py-3 md:mt-8 text-sm  md:text-md px-2 py-2">Request a Demo</button>
-
+        <button 
+          onClick={() => setIsFormOpen(true)}
+          className="bg-white text-black rounded-sm md:px-4 md:py-3 md:mt-8 text-sm  md:text-md px-2 py-2 hover:bg-transparent hover:text-white hover:border border-neutral-400 transition"
+        >
+          Request a Demo
+        </button>
       </div>
       <div className="border-t-2  border-neutral-700  flex flex-col-reverse  pt-15 mt-6 md:mt-0  justify-between md:flex-row ">
         <div className="h-full flex flex-row md:flex-col items-start gap-30  justify-between w-full md:w-1/2 mt-12 md:mt-0">
@@ -44,6 +53,8 @@ export const Footer = () => {
           </ul>
         </div>
       </div>
+
+      <TryNowForm isOpen={isFormOpen} onClose={() => setIsFormOpen(false)} />
     </section>
   )
 }

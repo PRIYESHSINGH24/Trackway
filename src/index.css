@@ -7,3 +7,18 @@ button {
   cursor: pointer;
   transition: border-color 0.25s;
 }
+
+@keyframes marquee {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(100%); }
+}
+@keyframes marquee-reverse {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-100%); }
+}
+.animate-marquee {
+  animation: marquee 300s linear infinite;
+}
+.animate-marquee-reverse {
+  animation: marquee-reverse 300s linear infinite;
+}
