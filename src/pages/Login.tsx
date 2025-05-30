@@ -8,7 +8,6 @@ const Login = () => {
 
   const handleLogin = (e: React.FormEvent) => {
     e.preventDefault();
-    // Handle login logic here
     console.log({ email, password });
   };
 
