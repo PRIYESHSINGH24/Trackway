@@ -1,5 +1,3 @@
-@import "tailwindcss";
-
 button {
   text-align: center;
   font-weight: 500;
@@ -7,6 +5,7 @@ button {
   cursor: pointer;
   transition: border-color 0.25s;
 }
+
 
 @keyframes marquee {
   0% { transform: translateX(0); }
@@ -22,3 +21,17 @@ button {
 .animate-marquee-reverse {
   animation: marquee-reverse 300s linear infinite;
 }
+
+
+
+/* src/styles/fonts.css or index.css */
+@font-face {
+  font-family:font1;
+  src: url('../assets/Fonts/font3.woff2');
+}
+@import "tailwindcss";
+
+@theme{
+   --font-font1:font1,"sans-serif";
+}
+

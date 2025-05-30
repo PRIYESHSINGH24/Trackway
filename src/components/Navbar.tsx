@@ -6,8 +6,14 @@ interface TooltipOption {
 import { useState } from "react"
 import { AnimatedTooltip, CaretButton } from "../ui/AnimatedTooltip"
 import { MobileNavigation } from "./MobileNavbar"
+import { useNavigate } from "react-router-dom"
 export const Navbar = () => {
   const [hoveredButton, setHoveredButton] = useState<string | null>(null)
+  const navigate = useNavigate();
+  //hadle login button
+  const handleLogin = () =>{
+      navigate('/login')
+  }
   const productMenuOptions: TooltipOption[] = [
     {
       label: "Assistant",
@@ -47,7 +53,7 @@ export const Navbar = () => {
   const newsMenuOptions: TooltipOption[] = [
     {
       label: "Blog",
-      onClick: () => console.log("Profile clicked"),
+      onClick: () => navigate('/blogs'),  //navigate to /blogs page
     },
     {
       label: "Newsroom",
@@ -58,6 +64,7 @@ export const Navbar = () => {
       onClick: () => console.log("Notifications clicked"),
     },
   ]
+
   return (
     <>
       <MobileNavigation />
@@ -90,7 +97,7 @@ export const Navbar = () => {
           </ul>
         </div>
         <div>
-          <button className="bg-gray-800 text-white px-4 py-2 rounded hover:bg-gray-700 transition duration-300">
+          <button onClick={handleLogin} className="bg-gray-800 text-white px-4 py-2 rounded hover:bg-gray-700 transition duration-300">
             Login
           </button>
         </div>
