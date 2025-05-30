@@ -1,17 +1,11 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-
-const roles = ["user", "admin"];
-
 const Signup = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const [role, setRole] = useState("user");
-  const [isDropdownOpen, setIsDropdownOpen] = useState(false);
-
   const handleSignup = (e: React.FormEvent) => {
     e.preventDefault();
-    console.log({ email, password, role });
+    console.log({ email, password });
   };
 
   return (
@@ -36,33 +30,6 @@ const Signup = () => {
             onChange={(e) => setPassword(e.target.value)}
             className="w-full bg-transparent border border-gray-700 px-4 py-3 rounded-md text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-white"
           />
-
-          {/* Custom Dropdown */}
-          {/* <div className="relative">
-            <button
-              type="button"
-              onClick={() => setIsDropdownOpen(!isDropdownOpen)}
-              className="w-full text-left bg-transparent border border-gray-700 px-4 py-3 rounded-md text-white focus:outline-none focus:ring-2 focus:ring-white"
-            >
-              Role: {role}
-            </button>
-            {isDropdownOpen && (
-              <ul className="absolute z-10 mt-2 w-full bg-black border border-gray-700 rounded-md shadow-lg">
-                {roles.map((r) => (
-                  <li
-                    key={r}
-                    onClick={() => {
-                      setRole(r);
-                      setIsDropdownOpen(false);
-                    }}
-                    className="px-4 py-2 text-white hover:bg-gray-800 cursor-pointer"
-                  >
-                    {r}
-                  </li>
-                ))}
-              </ul>
-            )}
-          </div> */}
 
           <button
             type="submit"
