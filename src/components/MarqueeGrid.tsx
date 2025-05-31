@@ -23,7 +23,6 @@ const MarqueeRow = ({
   reverse?: boolean;
 }) => {
   const [activeBlock, setActiveBlock] = useState<number | null>(null);
-  const [stopPosition, setStopPosition] = useState<number>(0);
   const containerRef = useRef<HTMLDivElement>(null);
 
   const cardClasses =
@@ -59,7 +58,6 @@ const MarqueeRow = ({
         marquee.style.transition = "transform 0.5s ease-out";
         marquee.style.transform = `translateX(-${relativePosition}px)`;
     
-        setStopPosition(relativePosition);
         setActiveBlock(index);
       }
     };
