@@ -17,7 +17,8 @@ const navigationItems: NavigationItem[] = [
   { label: "News", hasSubmenu: true },
   { label: "Company", href: "#company" },
 ]
-export function MobileNavigation() {
+
+export const MobileNavigation = () => {
   const [isOpen, setIsOpen] = useState(false)
 
   const toggleMenu = () => {

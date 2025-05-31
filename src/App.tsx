@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { BrowserRouter as Router, Routes, Route, useLocation } from "react-router-dom";
 import { Footer } from "./components/Footer";
 import { Navbar } from "./components/Navbar";
@@ -18,6 +19,43 @@ function Layout({ children }: { children: React.ReactNode }) {
       {!hideNavbarFooter && <Footer />}
     </div>
   );
+=======
+import { useEffect, useRef, useState } from "react";
+import Footer from "./components/Footer"
+import LandingPage from "./components/Landing"
+import { Navbar } from "./components/Navbar"
+
+function App() {
+  const [navbarHidden, setNavbarHidden] = useState(false);
+  const lastScrollY = useRef(0);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const currentScrollY = window.scrollY;
+      if (currentScrollY > 50 && currentScrollY > lastScrollY.current) {
+        setNavbarHidden(true);
+      } else {
+        setNavbarHidden(false);
+      }
+      lastScrollY.current = currentScrollY;
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
+  return (
+    <div className="flex flex-col w-screen h-full overflow-x-hidden bg-dark">
+      <header className="w-full">
+        <Navbar hidden={navbarHidden} />
+      </header>
+      <main className="flex-1">
+        <LandingPage />
+      </main>
+      <Footer />
+    </div>
+  )
+>>>>>>> a354985 (added more functionality in the code)
 }
 
 function App() {
