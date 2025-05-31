@@ -14,6 +14,7 @@ const features = [
   { icon: "🧑‍💼", title: "Client Management" },
   { icon: "⚡", title: "Quick Export" },
 ];
+// 
 
 const MarqueeRow = ({
   items,
