@@ -1,24 +1,7 @@
 import { useState } from "react"
 import { AnimatedTooltip, CaretButton } from "../ui/AnimatedTooltip"
 import { MobileNavigation } from "./MobileNavbar"
-
-interface TooltipOption {
-  label: string
-  onClick?: () => void
-}
-<<<<<<< HEAD
-import { useState } from "react"
-import { AnimatedTooltip, CaretButton } from "../ui/AnimatedTooltip"
-import { MobileNavigation } from "./MobileNavbar"
 import { useNavigate } from "react-router-dom"
-export const Navbar = () => {
-  const [hoveredButton, setHoveredButton] = useState<string | null>(null)
-  const navigate = useNavigate();
-  //hadle login button
-  const handleLogin = () =>{
-      navigate('/login')
-  }
-=======
 
 type NavbarProps = {
   hidden?: boolean
@@ -26,8 +9,10 @@ type NavbarProps = {
 
 export const Navbar = ({ hidden }: NavbarProps) => {
   const [hoveredButton, setHoveredButton] = useState<string | null>(null)
-  
->>>>>>> a354985 (added more functionality in the code)
+  const navigate = useNavigate();
+  const handleLogin = () => {
+    navigate('/login')
+  }
   const productMenuOptions: TooltipOption[] = [
     { label: "Assistant", onClick: () => console.log("Assistant clicked") },
     { label: "Vault", onClick: () => console.log("Vault clicked") },
@@ -43,24 +28,9 @@ export const Navbar = ({ hidden }: NavbarProps) => {
   ]
   
   const newsMenuOptions: TooltipOption[] = [
-<<<<<<< HEAD
-    {
-      label: "Blog",
-      onClick: () => navigate('/blogs'),  //navigate to /blogs page
-    },
-    {
-      label: "Newsroom",
-      onClick: () => console.log("Settings clicked"),
-    },
-    {
-      label: "Press Kit",
-      onClick: () => console.log("Notifications clicked"),
-    },
-=======
-    { label: "Blog", onClick: () => console.log("Blog clicked") },
+    { label: "Blog", onClick: () => navigate('/blogs') },
     { label: "Newsroom", onClick: () => console.log("Newsroom clicked") },
     { label: "Press Kit", onClick: () => console.log("Press Kit clicked") },
->>>>>>> a354985 (added more functionality in the code)
   ]
 
   return (
@@ -94,11 +64,7 @@ export const Navbar = ({ hidden }: NavbarProps) => {
           </ul>
         </div>
         <div>
-<<<<<<< HEAD
           <button onClick={handleLogin} className="bg-gray-800 text-white px-4 py-2 rounded hover:bg-gray-700 transition duration-300">
-=======
-          <button className="bg-transparent text-gray-300 px-4 py-2 rounded hover:text-gray-500 transition duration-300">
->>>>>>> a354985 (added more functionality in the code)
             Login
           </button>
         </div>
