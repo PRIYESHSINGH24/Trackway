@@ -111,7 +111,7 @@ const LandingPage = () => {
             <a href="#" className="text-[#b6a98f] text-sm font-medium hover:underline">Explore Workflows &rarr;</a>
           </div>
         </div>
-        <div className="w-full md:w-1/2 flex flex-col justify-center bg-[#f3f4f6] min-h-[400px] py-12">
+        <div className="w-full md:w-1/2 flex flex-col justify-center bg-[#dbd9d1] min-h-[400px] py-12">
           <MarqueeGrid />
         </div>
       </section>
@@ -178,8 +178,7 @@ const LandingPage = () => {
               <path id="trace2" d="M120,380 L180,340 L340,340 L460,180" fill="none" />
               <path id="trace3" d="M180,60 Q260,120 340,60" fill="none" />
               <path id="trace4" d="M60,120 Q120,180 180,120 Q240,60 300,120 Q360,180 420,120" fill="none" />
-              <text x="50%" y="48" textAnchor="middle" fill="#181714" fontSize="32" fontWeight="bold">PCB Innovation</text>
-              <text x="50%" y="80" textAnchor="middle" fill="#64748b" fontSize="18">Accelerated by AI</text>
+              
             </svg>
           </div>
         </div>
